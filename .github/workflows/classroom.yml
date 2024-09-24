@@ -19,12 +19,19 @@ jobs:
       with:
         test-name: test_preentrega
         setup-command: pip install pytest
-        command: "./test/test_preentrega/py"
+        command: pytest test/test_preentrega.py
         timeout: 20
         max-score: 100
+    - name: test_preentrega1
+      id: test_preentrega1
+      uses: classroom-resources/autograding-python-grader@v1
+      with:
+        timeout: 10
+        setup-command: ''
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TEST_PREENTREGA_RESULTS: "${{steps.test_preentrega.outputs.result}}"
+        TEST_PREENTREGA1_RESULTS: "${{steps.test_preentrega1.outputs.result}}"
       with:
-        runners: test_preentrega
+        runners: test_preentrega,test_preentrega1
