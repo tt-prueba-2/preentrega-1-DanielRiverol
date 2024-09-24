@@ -13,25 +13,38 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: test_preentrega
-      id: test_preentrega
+    - name: test_agregar
+      id: test_agregar
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: test_preentrega
+        test-name: test_agregar
         setup-command: pip install pytest
-        command: pytest test/test_preentrega.py
-        timeout: 20
-        max-score: 100
-    - name: test_preentrega1
-      id: test_preentrega1
-      uses: classroom-resources/autograding-python-grader@v1
-      with:
+        command: pytest test_agregar.py
         timeout: 10
-        setup-command: ''
+        max-score: 45
+    - name: test_mostrar
+      id: test_mostrar
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test_mostrar
+        setup-command: pip install pytest
+        command: pytest test_mostrar.py
+        timeout: 10
+        max-score: 45
+    - name: test_salir
+      id: test_salir
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test_salir
+        setup-command: pip install pytest
+        command: pytest test_salir.py
+        timeout: 10
+        max-score: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        TEST_PREENTREGA_RESULTS: "${{steps.test_preentrega.outputs.result}}"
-        TEST_PREENTREGA1_RESULTS: "${{steps.test_preentrega1.outputs.result}}"
+        TEST_AGREGAR_RESULTS: "${{steps.test_agregar.outputs.result}}"
+        TEST_MOSTRAR_RESULTS: "${{steps.test_mostrar.outputs.result}}"
+        TEST_SALIR_RESULTS: "${{steps.test_salir.outputs.result}}"
       with:
-        runners: test_preentrega,test_preentrega1
+        runners: test_agregar,test_mostrar,test_salir
