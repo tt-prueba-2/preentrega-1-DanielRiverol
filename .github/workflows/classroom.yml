@@ -19,7 +19,7 @@ jobs:
       with:
         test-name: test_agregar
         setup-command: pip install pytest
-        command: pytest test_agregar.py
+        command: pytest test_guardar.py
         timeout: 10
         max-score: 45
     - name: test_mostrar
