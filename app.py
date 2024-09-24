@@ -1,5 +1,5 @@
 # Lista para almacenar los productos
-productos = []
+producto = []
 
 
 # Función principal para el sistema de inventario
