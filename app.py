@@ -26,15 +26,8 @@ def main():
             productos.append([nombre, cantidad])
             print("Producto agregado con éxito.")
 
-        elif opcion == 2:
-            # Mostrar los productos
-            if len(productos) == 0:
-                print("No hay productos registrados.")
-            else:
-                print("\n--- Lista de Productos ---")
-                for i, producto in enumerate(productos):
-                    print("Producto", i + 1, ": Nombre:", producto[0], ", Cantidad:", producto[1])
-
+       
+        
       
         else:
             print("Opción inválida, por favor intentá de nuevo.")
