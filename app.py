@@ -18,14 +18,7 @@ def main():
         opcion = int(input("Seleccioná una opción: "))
 
         if opcion == 1:
-            # Agregar un nuevo producto
-            nombre = input("Ingresá el nombre del producto: ")
-            cantidad = int(input("Ingresá la cantidad del producto: "))
-
-            # Agregar el producto a la lista como una tupla (nombre, cantidad)
-            productos.append([nombre, cantidad])
-            print("Producto agregado con éxito.")
-
+           
        
         
       
