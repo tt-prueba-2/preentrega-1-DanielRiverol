@@ -28,8 +28,8 @@ def main():
 
         elif opcion == 2:
             # Mostrar los productos
-            if len(productos) == 0:
-                print("No hay productos registrados.")
+            # if len(productos) == 0:
+            #     print("No hay productos registrados.")
             # else:
             #     print("\n--- Lista de Productos ---")
             #     for i, producto in enumerate(productos):
