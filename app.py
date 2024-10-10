@@ -17,7 +17,7 @@ def main():
         # Solicitar la opción al usuario
         opcion = int(input("Seleccioná una opción: "))
 
-        if opcion == 1:
+        if opcion == 9:
             # Agregar un nuevo producto
             nombre = input("Ingresá el nombre del producto: ")
             cantidad = int(input("Ingresá la cantidad del producto: "))
