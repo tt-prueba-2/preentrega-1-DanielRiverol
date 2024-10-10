@@ -37,7 +37,7 @@ def main():
 
         elif opcion == 3:
             # Salir del programa
-            # print("Saliendo del sistema de inventario...")
+            print("Saliendo del sistema de inventario...")
 
         else:
             print("Opción inválida, por favor intentá de nuevo.")
