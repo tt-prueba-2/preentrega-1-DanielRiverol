@@ -28,16 +28,16 @@ def main():
 
         elif opcion == 2:
             # Mostrar los productos
-            # if len(productos) == 0:
-            #     print("No hay productos registrados.")
-            # else:
-            #     print("\n--- Lista de Productos ---")
-            #     for i, producto in enumerate(productos):
-            #         print("Producto", i + 1, ": Nombre:", producto[0], ", Cantidad:", producto[1])
+            if len(productos) == 0:
+                print("No hay productos registrados.")
+            else:
+                print("\n--- Lista de Productos ---")
+                for i, producto in enumerate(productos):
+                    print("Producto", i + 1, ": Nombre:", producto[0], ", Cantidad:", producto[1])
 
         elif opcion == 3:
             # Salir del programa
-            print("Saliendo del sistema de inventario...")
+            # print("Saliendo del sistema de inventario...")
 
         else:
             print("Opción inválida, por favor intentá de nuevo.")
